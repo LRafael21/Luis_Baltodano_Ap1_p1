@@ -24,5 +24,16 @@ namespace Luis_Baltodano_Ap1_p1
         {
             InitializeComponent();
         }
+
+        private void RegistrarMenuItem_Click(object sander, RoutedEventArgs e)
+        {
+            //var registro = new Registro();
+            //registro.Show();
+        }
+        private void ConsultarMenuItem_Click(object sander, RoutedEventArgs e)
+        {
+            //Consulta consulta = new Consulta();
+            //consulta.Show();
+        }
     }
 }
