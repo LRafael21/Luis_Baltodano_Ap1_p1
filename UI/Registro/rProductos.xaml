@@ -7,17 +7,23 @@
             <Label Content="Id:" />
 
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding LibroId}" Width="100" />
+                <TextBox Text="{Binding ProductosId}" Width="100" />
                 <Button Content="🔎 Buscar" Click="BuscarButton_Click" />
             </StackPanel>
         </StackPanel>
 
+        <Label Content="Descripcion:" />
+            <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="200" />
+
+            <Label Content="Existencia:" />
+            <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Width="200" />
+
       
         <StackPanel Margin="0,16,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
 
-            <Button Content="🆕 Nuevo" Click="NuevoButton_Click" />
-            <Button Content="✔ Guardar" Click="GuardarButton_Click" />
-            <Button Content="⛔ Eliminar" Click="EliminarButton_Click" />
+             <Button Content="🆕 Nuevo" Click="NuevoButton_Click" /> 
+             <Button Content="✔ Guardar" Click="GuardarButton_Click" /> 
+             <Button Content="⛔ Eliminar" Click="EliminarButton_Click" /> 
         </StackPanel>
 
         </StackPanel>

@@ -1,46 +1,47 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Parcial.Entidades;
+using Parcial.BLL;
 
-namespace Luis_Baltodano_Ap1_p1.UI
+namespace Luis_Baltodano_Ap1_p1.UI.Registros
 {
 
 
-    public partial class Registro : Window
+    public partial class rProductos : Window
     {
-      
 
-        public Registro()
+        private Productos Productos = new Productos();
+        public rProductos()
         {
             InitializeComponent();
 
-            
+            this.DataContext = Productos;
+
+
         }
 
         private void Cargar()
         {
+            this.DataContext = null;
+            this.DataContext = this.Productos;
 
         }
 
         private void Limpiar()
         {
+            this.Productos = new Productos();
+            this.DataContext = Productos;
 
         }
 
         private bool Validar()
         {
-            bool esValido = false;
+            ////ProductoId, Descripcion, Existencia, Costo y ValorInventario
+            bool esValido = true;
+            if(string.IsNullOrWhiteSpace(Productos.Descripcion))
+            {
+                esValido = false
+
+            }
 
 
             return esValido;
