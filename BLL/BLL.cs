@@ -6,7 +6,9 @@ using Parcial.DAL;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Luis_Baltodano_Ap1_p1.BLL
+//no error por ahora
+
+namespace Parcial.BLL
 {
     public class ProductosBLL
     {
@@ -153,7 +155,6 @@ namespace Luis_Baltodano_Ap1_p1.BLL
             return lista;
 
         }
-
 
 
     }
