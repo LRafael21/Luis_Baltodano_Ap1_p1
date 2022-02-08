@@ -16,8 +16,8 @@ mc:Ignorable="d" Title="Consulta de Libros" Height="300" Width="400">
                 <ComboBox x:Name="FiltroComboBox" Width="100">
 
                     <ComboBox.Items>
-                        <ComboBoxItem x:Name="Titulo" Content="Titulo" />
-                        <ComboBoxItem x:Name="Grupo" Content="Grupo" />
+                        <ComboBoxItem x:Name="Codigo" Content="Codigo" />
+                        <ComboBoxItem x:Name="Descripcion" Content="Descripcion" />
                     </ComboBox.Items>
                 </ComboBox>
 

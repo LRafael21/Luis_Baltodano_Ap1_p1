@@ -1,4 +1,4 @@
-<Window x:Class="Parcial.UI.Registro.rProductos" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Parcial.UI.Registro" mc:Ignorable="d" Title="Registro Aplicada" Height="400" Width="600">
+<Window x:Class="Parcial.UI.Registro.rProductos" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Parcial.UI.Registro" mc:Ignorable="d" Title="Registro Aplicada" Height="400" Width="400">
     <Grid>
 
         <!-- Agregar Commit-->
@@ -6,7 +6,7 @@
         <StackPanel Orientation="Vertical" Margin="10">
 
         <StackPanel Orientation="Vertical">
-            <Label Content="Id:" />
+            <Label Content="ProductoId:" />
 
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{Binding ProductoId}" Width="100" />
@@ -14,14 +14,19 @@
             </StackPanel>
         </StackPanel>
 
+            <StackPanel Orientation="Vertical">
         <Label Content="Descripcion:" />
             <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="200" />
+
+            <Label Content="Existencia:" />
+            <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Width="200" />
 
             <Label Content="Costo:" />
             <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Width="200" />
 
             <Label Content="ValorInventario:" />
             <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" Width="200" />
+             </StackPanel>
 
 
       
