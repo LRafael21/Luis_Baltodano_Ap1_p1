@@ -1,6 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
+//NoErrorPorAhora
+
 namespace Parcial.Entidades
 {
    

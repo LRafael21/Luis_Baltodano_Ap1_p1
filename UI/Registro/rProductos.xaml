@@ -1,5 +1,7 @@
-<Window x:Class="Luis_Baltodano_Ap1_p1.UI.Registro" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Luis_Baltodano_Ap1_p1.UI" mc:Ignorable="d" Title="ParciaAplicada" Height="400" Width="600">
+<Window x:Class="Parcial.UI.Registro.rProductos" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Parcial.UI.Registro" mc:Ignorable="d" Title="Registro Aplicada" Height="400" Width="600">
     <Grid>
+
+        <!-- Agregar Commit-->
 
         <StackPanel Orientation="Vertical" Margin="10">
 
@@ -7,7 +9,7 @@
             <Label Content="Id:" />
 
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding ProductosId}" Width="100" />
+                <TextBox Text="{Binding ProductoId}" Width="100" />
                 <Button Content="🔎 Buscar" Click="BuscarButton_Click" />
             </StackPanel>
         </StackPanel>
@@ -15,15 +17,19 @@
         <Label Content="Descripcion:" />
             <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="200" />
 
-            <Label Content="Existencia:" />
-            <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Width="200" />
+            <Label Content="Costo:" />
+            <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Width="200" />
+
+            <Label Content="ValorInventario:" />
+            <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" Width="200" />
+
 
       
         <StackPanel Margin="0,16,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
 
-             <Button Content="🆕 Nuevo" Click="NuevoButton_Click" /> 
+            <Button Content="🆕 Nuevo" Click="NuevoButton_Click" />  
              <Button Content="✔ Guardar" Click="GuardarButton_Click" /> 
-             <Button Content="⛔ Eliminar" Click="EliminarButton_Click" /> 
+             <Button Content="⛔ Eliminar" Click="EliminarButton_Click" />  
         </StackPanel>
 
         </StackPanel>

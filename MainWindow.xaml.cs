@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Parcial.Entidades;
+using Parcial.BLL;
+using Parcial.DAL;
+using System;
+using Parcial.UI.Consultas;
+using Parcial.UI.Registro;
+//PUSH
 
-namespace Luis_Baltodano_Ap1_p1
+namespace Parcial
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,13 +21,13 @@ namespace Luis_Baltodano_Ap1_p1
 
         private void RegistrarMenuItem_Click(object sander, RoutedEventArgs e)
         {
-            //var registro = new Registro();
-            //registro.Show();
+            var rProductos = new rProductos();
+            rProductos.Show();
         }
         private void ConsultarMenuItem_Click(object sander, RoutedEventArgs e)
         {
-            //Consulta consulta = new Consulta();
-            //consulta.Show();
+            var cProductos = new  cProductos();
+            cProductos.Show();
         }
     }
 }

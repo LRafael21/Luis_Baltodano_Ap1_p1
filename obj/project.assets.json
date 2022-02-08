@@ -1171,11 +1171,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Luis_Baltodano_Ap1_p1\\Luis_Baltodano_Ap1_p1.csproj",
+      "projectUniqueName": "D:\\Parcial\\Luis_Baltodano_Ap1_p1\\Luis_Baltodano_Ap1_p1.csproj",
       "projectName": "Luis_Baltodano_Ap1_p1",
-      "projectPath": "D:\\Luis_Baltodano_Ap1_p1\\Luis_Baltodano_Ap1_p1.csproj",
+      "projectPath": "D:\\Parcial\\Luis_Baltodano_Ap1_p1\\Luis_Baltodano_Ap1_p1.csproj",
       "packagesPath": "C:\\Users\\Luis Rafael\\.nuget\\packages\\",
-      "outputPath": "D:\\Luis_Baltodano_Ap1_p1\\obj\\",
+      "outputPath": "D:\\Parcial\\Luis_Baltodano_Ap1_p1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

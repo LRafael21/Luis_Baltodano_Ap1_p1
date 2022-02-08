@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\
+D:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\
 Luis_Baltodano_Ap1_p1
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Luis_Baltodano_Ap1_p1\App.xaml
-11407045341
+D:\Parcial\Luis_Baltodano_Ap1_p1\App.xaml
+3438084587
 
-4680403083
+9-954069734
 212-2135964792
-MainWindow.xaml;
+MainWindow.xaml;UI\Consultas\cConsultas.xaml;UI\Registro\rProductos.xaml;
 
 False
 

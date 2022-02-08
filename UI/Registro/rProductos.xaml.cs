@@ -2,19 +2,21 @@ using System.Windows;
 using Parcial.Entidades;
 using Parcial.BLL;
 
-namespace Luis_Baltodano_Ap1_p1.UI.Registros
+//PUSH
+
+namespace Parcial.UI.Registro
 {
 
 
     public partial class rProductos : Window
     {
 
-        private Productos Productos = new Productos();
+        private Productos Producto = new Productos();
         public rProductos()
         {
             InitializeComponent();
 
-            this.DataContext = Productos;
+            this.DataContext = Producto;
 
 
         }
@@ -22,14 +24,14 @@ namespace Luis_Baltodano_Ap1_p1.UI.Registros
         private void Cargar()
         {
             this.DataContext = null;
-            this.DataContext = this.Productos;
+            this.DataContext = this.Producto;
 
         }
 
         private void Limpiar()
         {
-            this.Productos = new Productos();
-            this.DataContext = Productos;
+            this.Producto = new Productos();
+            this.DataContext = Producto;
 
         }
 
@@ -37,35 +39,77 @@ namespace Luis_Baltodano_Ap1_p1.UI.Registros
         {
             ////ProductoId, Descripcion, Existencia, Costo y ValorInventario
             bool esValido = true;
-            if(string.IsNullOrWhiteSpace(Productos.Descripcion))
+
+            if(string.IsNullOrWhiteSpace(Producto.Descripcion))
             {
-                esValido = false
+                esValido = false;
+                DescripcionTextBox.Focus();
+                MessageBox.Show("Debe digitar una Descripcion!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else if (string.IsNullOrWhiteSpace(Producto.Costo.ToString()))
+            {
+                esValido = false;
+                CostoTextBox.Focus();
+                MessageBox.Show("Debe digitar un  Costo!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
 
-
             return esValido;
         }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
+            var encontrado = ProductosBLL.Buscar(this.Producto.ProductoId);
+            if(encontrado != null)
+            {
+                this.Producto = encontrado;
+                Cargar();
+            }
+            else
+            {
+                Limpiar();
+                MessageBox.Show("No se encontro el producto", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
 
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
+            Limpiar();
+            MessageBox.Show("No se encontro el producto", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
 
         }
 
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            bool paso = false;
+
+            if(!Validar())
+            if(paso = true)
+                return;
+
+            paso = ProductosBLL.Guardar(Producto);
+            if(paso)
+                MessageBox.Show("Producto Guardado con exito!!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+                MessageBox.Show("No se pudo Guardar el producto!!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Information);
 
 
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
+            if(ProductosBLL.Eliminar(Producto.ProductoId))
+            {
+                Limpiar();
+                MessageBox.Show(" Producto Eliminado con exito!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show(" No se pudo eliminar el producto!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
 
         }
     }

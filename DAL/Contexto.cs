@@ -1,15 +1,24 @@
 using Microsoft.EntityFrameworkCore;
 using Parcial.Entidades;
 
-public class Contexto:DbContext
+//NoErrroresPorAhora
+
+namespace Parcial.DAL
 {
 
-    public DbSet<Productos> Productos { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public class Contexto : DbContext
     {
-        optionsBuilder.UseSqlite(@"Data Source=Data\Libros.db");
-    }
 
-    
-} 
+
+        public DbSet<Productos> Productos { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite(@"Data Source=Data\Libros.db");
+        }
+
+
+
+    }
+}

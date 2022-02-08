@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "94GCB8cZtdNgvv/D3mtIM+Okw+3ISyAL6iySEsIk5Z9D5jHfC16A4IBUzsdztkrMD1GcbqcDgw8AN7byX2Nf2A==",
+  "dgSpecHash": "S4AUEp0DvfN1zu298/MgSNM+vimUfrh+30677OEbI4zaAyQDRwM455CNJ6JFm1jLjTlHPpPjujXQpEvwR/WSsw==",
   "success": true,
-  "projectFilePath": "D:\\Luis_Baltodano_Ap1_p1\\Luis_Baltodano_Ap1_p1.csproj",
+  "projectFilePath": "D:\\Parcial\\Luis_Baltodano_Ap1_p1\\Luis_Baltodano_Ap1_p1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.1\\microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
