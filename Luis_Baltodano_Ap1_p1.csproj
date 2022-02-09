@@ -15,4 +15,15 @@
     </PackageReference>
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Resource Include="./Resources/store.png"/>
+    <Resource Include="./Resources/delete.png" />
+    <Resource Include="./Resources/diskette.png"/>
+    <Resource Include="./Resources/newW.png"/>
+    <Resource Include="./Resources/lupa%20(1).png"/>
+    <Resource Include="./Resources/registros.png" />
+    <Resource Include="./Resources/Consultas.png" />
+    <Resource Include="./Resources/ColmadoPOPI.PNG" />
+  </ItemGroup>
 </Project>

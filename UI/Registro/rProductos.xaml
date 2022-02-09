@@ -2,7 +2,6 @@
     <Grid>
 
         <StackPanel Orientation="Vertical" Margin="10,10,10,10">
-            <!-- Agregar Commit-->
 
             <StackPanel Orientation="Vertical" Margin="10">
 

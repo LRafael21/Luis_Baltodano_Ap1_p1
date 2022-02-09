@@ -5,18 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parcial"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="500">
+        Title="Registro de Colmado"  ResizeMode="NoResize" Height="400" Width="485" Icon="./Resources/store.png" >
     <Grid>
-            <StackPanel>
+        <Image Source="./Resources/ColmadoPOPI.png"  />
+     
+
+            <StackPanel >
+               
                 <!--Menu Registro-->
-                <Menu Height="20">
-                    <MenuItem Header="Registrar">
-                         <MenuItem x:Name="rMenuItem" Header="Registrar " Click="RegistrarMenuItem_Click"  /> 
+                <Menu Height="22" Background="#ff7675">
+                    <MenuItem Header="Registrar" FontWeight="Bold" Background="White" Margin="0,0,-2,0">
+                        <MenuItem x:Name="rMenuItem" Header="Registrar " Click="RegistrarMenuItem_Click" />
+                        <MenuItem.Icon>
+                            <Image Source="./Resources/registros.png" />
+                        </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Consultar">
-                         <MenuItem x:Name="cMenuItem" Header="Consultar " Click="ConsultarMenuItem_Click" /> 
+                    <MenuItem Header="Consultar" FontWeight="Bold" Background="White" Margin="0,0,-5,0">
+                        <MenuItem x:Name="cMenuItem" Header="Consultar " Click="ConsultarMenuItem_Click" />
+                        <MenuItem.Icon>
+                            <Image Source="./Resources/Consultas.png" />
+                        </MenuItem.Icon>
                     </MenuItem>
                 </Menu>
+                <Label Content="COLMADO POPI" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Center" />
             </StackPanel>
         </Grid>
 </Window>
