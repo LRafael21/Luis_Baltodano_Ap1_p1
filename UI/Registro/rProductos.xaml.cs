@@ -84,19 +84,14 @@ namespace Parcial.UI.Registro
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            bool paso = false;
+           
 
             if(!Validar())
-            if(paso = true)
                 return;
-
-            paso = ProductosBLL.Guardar(Producto);
-            if(paso)
+            if(ProductosBLL.Guardar(Producto))
                 MessageBox.Show("Producto Guardado con exito!!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             else
                 MessageBox.Show("No se pudo Guardar el producto!!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Information);
-
-
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)

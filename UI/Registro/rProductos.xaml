@@ -1,42 +1,69 @@
-<Window x:Class="Parcial.UI.Registro.rProductos" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Parcial.UI.Registro" mc:Ignorable="d" Title="Registro Aplicada" Height="400" Width="400">
+<Window x:Class="Parcial.UI.Registro.rProductos" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Parcial.UI.Registro" mc:Ignorable="d" Title="Registro de Productos" Icon="/Resources/registros.png" ResizeMode="NoResize" Height="350" Width="300" Background="#dfe6e9">
     <Grid>
 
-        <!-- Agregar Commit-->
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10">
+            <!-- Agregar Commit-->
 
-        <StackPanel Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Vertical" Margin="10">
 
-        <StackPanel Orientation="Vertical">
-            <Label Content="ProductoId:" />
+                <StackPanel Orientation="Vertical">
+                    <Label Content="ProductoId:" FontWeight="Bold" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Text="{Binding ProductoId}" Width="100" />
 
-            <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding ProductoId}" Width="100" />
-                <Button Content="🔎 Buscar" Click="BuscarButton_Click" />
+                        <Button Width="67" Height="20" Margin="5,0,0,0 " Click="BuscarButton_Click" Background="White">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/lupa%20(1).png" />
+                                <Label Content="Buscar" Padding="-1" Margin="4,0" />
+                            </StackPanel>
+                        </Button>
+
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <Label Content="Descripcion:" FontWeight="Bold" />
+                    <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="200" />
+
+                    <Label Content="Existencia:" FontWeight="Bold"  />
+                    <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Width="200" />
+
+                    <Label Content="Costo:" FontWeight="Bold" />
+                    <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Width="200" />
+
+                    <Label Content="ValorInventario:" FontWeight="Bold" />
+                    <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" IsReadOnly="true" Width="200" />
+                </StackPanel>
+
+
+                <StackPanel Margin="0,16,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    
+
+                    <Button Width="67" Height="20" Margin="5,0,0,0 " Click="NuevoButton_Click" Background="White" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/newW.png" />
+                            <Label Content="Nuevo" Padding="-1" Margin="4,0" />
+                        </StackPanel>
+                    </Button>
+
+
+                    <Button Width="67" Height="20" Margin="5,0,0,0 " Click="GuardarButton_Click" Background="White">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/diskette.png" />
+                            <Label Content="Guardar" Padding="-1" Margin="4,0" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Width="67" Height="20" Margin="5,0,0,0 " Click="EliminarButton_Click" Background="White">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/delete.png" />
+                            <Label Content="Eliminar"  Padding="-1" Margin="4,0"  />
+                        </StackPanel>
+                        </Button>
+                </StackPanel>
+
             </StackPanel>
-        </StackPanel>
-
-            <StackPanel Orientation="Vertical">
-        <Label Content="Descripcion:" />
-            <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="200" />
-
-            <Label Content="Existencia:" />
-            <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Width="200" />
-
-            <Label Content="Costo:" />
-            <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Width="200" />
-
-            <Label Content="ValorInventario:" />
-            <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" Width="200" />
-             </StackPanel>
-
-
-      
-        <StackPanel Margin="0,16,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
-
-            <Button Content="🆕 Nuevo" Click="NuevoButton_Click" />  
-             <Button Content="✔ Guardar" Click="GuardarButton_Click" /> 
-             <Button Content="⛔ Eliminar" Click="EliminarButton_Click" />  
-        </StackPanel>
-
         </StackPanel>
 
 
