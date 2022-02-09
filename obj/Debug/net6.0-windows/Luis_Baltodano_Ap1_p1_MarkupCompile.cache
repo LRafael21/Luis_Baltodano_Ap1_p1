@@ -1,20 +1,20 @@
 ﻿Luis_Baltodano_Ap1_p1
-
+1.0.0.0
 
 winexe
 C#
 .cs
-D:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\
+d:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\
 Luis_Baltodano_Ap1_p1
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Parcial\Luis_Baltodano_Ap1_p1\App.xaml
+d:\Parcial\Luis_Baltodano_Ap1_p1\App.xaml
 3438084587
 
-9-954069734
-212-2135964792
+111917363044
+2121388581905
 MainWindow.xaml;UI\Consultas\cConsultas.xaml;UI\Registro\rProductos.xaml;
 
-False
+True
 
