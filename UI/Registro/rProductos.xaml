@@ -31,7 +31,7 @@
                     <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Width="200" />
 
                     <Label Content="ValorInventario:" FontWeight="Bold" />
-                    <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}"  Width="200" />
+                    <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" Width="200" IsEnabled="False" />
                 </StackPanel>
 
 
