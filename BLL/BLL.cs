@@ -93,7 +93,12 @@ namespace Parcial.BLL
             bool paso = false;
             try
             {
-                var libro = contexto.Productos.Find(productoId);
+                var librodeProductos = contexto.Productos.Find(productoId);
+                if(librodeProductos != null)
+                {
+                    contexto.Productos.Remove(librodeProductos);
+                    paso = contexto.SaveChanges() > 0;
+                }
             }
             catch (System.Exception)
             {
