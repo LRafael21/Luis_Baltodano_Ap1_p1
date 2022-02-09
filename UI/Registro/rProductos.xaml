@@ -8,7 +8,7 @@
                 <StackPanel Orientation="Vertical">
                     <Label Content="ProductoId:" FontWeight="Bold" />
                     <StackPanel Orientation="Horizontal">
-                        <TextBox Text="{Binding ProductoId}" Width="100" />
+                        <TextBox x:Name="ProductoIdTextBox" Text="{Binding ProductoId}" Width="100" />
 
                         <Button Width="67" Height="20" Margin="5,0,0,0 " Click="BuscarButton_Click" Background="White">
                             <StackPanel Orientation="Horizontal">
@@ -31,7 +31,7 @@
                     <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Width="200" />
 
                     <Label Content="ValorInventario:" FontWeight="Bold" />
-                    <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" IsReadOnly="true" Width="200" />
+                    <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}"  Width="200" />
                 </StackPanel>
 
 
