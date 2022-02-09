@@ -52,10 +52,15 @@ namespace Parcial.UI.Registro
                 CostoTextBox.Focus();
                 MessageBox.Show("Debe digitar un  Costo!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
 
+            } else if (ProductosBLL.Existe(Producto.ProductoId))
+            {
+                MessageBox.Show("El Producto ya existe" , "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+                esValido = false;
             }
-
-            return esValido;
+            return esValido ;
         }
+
+
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -77,7 +82,6 @@ namespace Parcial.UI.Registro
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
-            MessageBox.Show("No se encontro el producto", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
 
         }
 
@@ -93,9 +97,9 @@ namespace Parcial.UI.Registro
             else
                 MessageBox.Show("No se pudo Guardar el producto!!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
+            
             if(ProductosBLL.Eliminar(Producto.ProductoId))
             {
                 Limpiar();
