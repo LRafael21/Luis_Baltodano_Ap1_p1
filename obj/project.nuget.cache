@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "S4AUEp0DvfN1zu298/MgSNM+vimUfrh+30677OEbI4zaAyQDRwM455CNJ6JFm1jLjTlHPpPjujXQpEvwR/WSsw==",
+  "dgSpecHash": "C9HbvHehredw52W5d/5RIHWbvmLMPG60PpSwJ/YoJOfdUpEzcxN7n6vuJf4T69b74jRLAC1C7HXavObrw8+noA==",
   "success": true,
   "projectFilePath": "D:\\Parcial\\Luis_Baltodano_Ap1_p1\\Luis_Baltodano_Ap1_p1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Luis Rafael\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\Luis Rafael\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.1\\microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
@@ -24,6 +26,8 @@
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Luis Rafael\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
+    "C:\\Users\\Luis Rafael\\.nuget\\packages\\showmethexaml.msbuild\\2.0.0\\showmethexaml.msbuild.2.0.0.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\Luis Rafael\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",

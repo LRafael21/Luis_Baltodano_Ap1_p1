@@ -59,3 +59,7 @@ D:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\Luis_Baltodano_Ap1_p1.
 D:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\ref\Luis_Baltodano_Ap1_p1.dll
 D:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\Luis_Baltodano_Ap1_p1.pdb
 D:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\Luis_Baltodano_Ap1_p1.genruntimeconfig.cache
+D:\Parcial\Luis_Baltodano_Ap1_p1\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+D:\Parcial\Luis_Baltodano_Ap1_p1\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+D:\Parcial\Luis_Baltodano_Ap1_p1\bin\Debug\net6.0-windows\ShowMeTheXAML.dll
+D:\Parcial\Luis_Baltodano_Ap1_p1\obj\Debug\net6.0-windows\App.baml
