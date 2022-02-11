@@ -1,6 +1,7 @@
 using System.Windows;
 using Parcial.Entidades;
 using Parcial.BLL;
+using System;
 
 //PUSH
 
@@ -40,7 +41,7 @@ namespace Parcial.UI.Registro
             ////ProductoId, Descripcion, Existencia, Costo y ValorInventario
             bool esValido = true;
 
-            if(string.IsNullOrWhiteSpace(Producto.Descripcion))
+            if (string.IsNullOrWhiteSpace(Producto.Descripcion))
             {
                 esValido = false;
                 DescripcionTextBox.Focus();
@@ -50,25 +51,27 @@ namespace Parcial.UI.Registro
             {
                 esValido = false;
                 CostoTextBox.Focus();
-                MessageBox.Show("Debe digitar un  Costo!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Debe digitar un Costo!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
 
-            } else if (ProductosBLL.Existe(Producto.ProductoId))
+            }
+            else if (ProductosBLL.Existe(Producto.ProductoId))
             {
-                MessageBox.Show("El Producto ya existe" , "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("El Producto ya Existe!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
                 esValido = false;
             }
-            return esValido ;
+            return esValido;
         }
-
 
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var encontrado = ProductosBLL.Buscar(this.Producto.ProductoId);
-            if(encontrado != null)
+            if (encontrado != null)
             {
                 this.Producto = encontrado;
                 Cargar();
+                CalcularValorInventario();
+                
             }
             else
             {
@@ -84,23 +87,40 @@ namespace Parcial.UI.Registro
             Limpiar();
 
         }
+        private int CalcularValorInventario()
+        {
 
+            int InventarioValor = Convert.ToInt32(CostoTextBox.Text) * Convert.ToInt32(ExistenciaTextBox.Text);
+            ValorInventarioTextBox.Text = InventarioValor.ToString();
+
+            return InventarioValor;
+
+
+        }
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-           
 
-            if(!Validar())
+
+            if (!Validar())
                 return;
-            if(ProductosBLL.Guardar(Producto))
+            if (ProductosBLL.Guardar(Producto))
+            {
+                CalcularValorInventario();
                 MessageBox.Show("Producto Guardado con exito!!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            }
+
             else
                 MessageBox.Show("No se pudo Guardar el producto!!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
         }
+
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            if(ProductosBLL.Eliminar(Producto.ProductoId))
+
+            if (ProductosBLL.Eliminar(Producto.ProductoId))
             {
                 Limpiar();
                 MessageBox.Show(" Producto Eliminado con exito!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -108,7 +128,7 @@ namespace Parcial.UI.Registro
             else
             {
                 MessageBox.Show(" No se pudo eliminar el producto!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
+            }
 
         }
     }
