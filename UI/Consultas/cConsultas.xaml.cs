@@ -23,37 +23,38 @@ namespace Parcial.UI.Consultas
         {
             var listado = new List<Productos>();
 
-            if (string.IsNullOrWhiteSpace(CriterioTextBoxx.Text))
+            if (CriterioTextBoxx.Text.Trim().Length > 0)
             {
-             listado = ProductosBLL.GetList(e => true);
-                
-            }
-            else
-            {
+
                 switch (FiltroComboBox.SelectedIndex)
                 {
                     case 0:
-        
-                        listado = ProductosBLL.GetList(e => e.Descripcion.Contains(CriterioTextBoxx.Text));
-                        CriterioTextBoxx.Text.ToLower();
-                        Cargar();
+
+                        listado = ProductosBLL.GetList(e => e.Descripcion.ToLower().Contains(CriterioTextBoxx.Text.ToLower()));
+
                         break;
 
-                    case 1: listado = ProductosBLL.GetList(p => p.ProductoId == Convert.ToInt32(CriterioTextBoxx.Text));
-                        CriterioTextBoxx.Text.ToLower();
-                        Cargar();
+                    case 1:
+                        listado = ProductosBLL.GetList(e => e.ProductoId == Convert.ToInt32(CriterioTextBoxx.Text));
+
+
                         break;
-                
-                        
-                        
                 }
-                
-
-                ProductosDataGrid.ItemsSource = null;
-                ProductosDataGrid.ItemsSource = listado;
-
             }
+            else
+            {
+                listado = ProductosBLL.GetList(e => true);
+            }
+
+            ProductosDataGrid.ItemsSource = null;
+            ProductosDataGrid.ItemsSource = listado;
+
+
+
+
+
         }
+
         private void Cargar()
         {
             this.DataContext = null;
@@ -61,10 +62,5 @@ namespace Parcial.UI.Consultas
 
         }
 
-
-
-       
-
-
-   }
+    }
 }

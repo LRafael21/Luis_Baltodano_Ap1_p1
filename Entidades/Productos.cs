@@ -13,9 +13,9 @@ namespace Parcial.Entidades
         public int ProductoId { get; set; }
 
         public string Descripcion { get; set; }
-        public int  Existencia { get; set; }
-        public int Costo { get; set; }
-        public int ValorInventario { get; set; }
+        public decimal  Existencia { get; set; }
+        public decimal Costo { get; set; }
+        public decimal ValorInventario { get; set; }
 
     }
 }

@@ -15,7 +15,7 @@ namespace Parcial.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=Data\Libros.db");
+            optionsBuilder.UseSqlite(@"Data Source=Data\Parcial.db");
         }
 
 
