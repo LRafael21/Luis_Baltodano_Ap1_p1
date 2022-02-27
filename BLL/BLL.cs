@@ -33,6 +33,27 @@ namespace Parcial.BLL
             return encontrado;
 
         }
+        public static bool Existe(string descripcion)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+
+            try
+            {
+                encontrado = contexto.Productos.Any(e => e.Descripcion == descripcion);
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+
+        }
         private static bool Insertar(Productos productos)
         {
             Contexto contexto = new Contexto();

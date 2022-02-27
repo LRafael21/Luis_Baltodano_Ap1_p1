@@ -100,19 +100,26 @@ namespace Parcial.UI.Registro
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            CalcularValorInventario();
 
             if (!Validar())
                 return;
+
+            if (ProductosBLL.Existe(DescripcionTextBox.Text))
+            {
+                MessageBox.Show("Ya existe este producto.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (ProductosBLL.Guardar(Producto))
             {
-                CalcularValorInventario();
+               
                 MessageBox.Show("Producto Guardado con exito!!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
 
             else
-                MessageBox.Show("No se pudo Guardar el producto!!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("No se pudo Guardar el producto!!", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
 
 
         }
