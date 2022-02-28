@@ -66,7 +66,12 @@ namespace Parcial.UI.Registro
                 CostoTextBox.Focus();
                 MessageBox.Show("Debe digitar un Costo!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
+            if (Producto.ProductoId <= 0)
+            {
+                esValido = false;
+                ProductoIdTextBox.Focus();
+                MessageBox.Show("Debe digitar un Producto!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
             else if (string.IsNullOrWhiteSpace(Producto.Existencia.ToString()))
             {
@@ -81,6 +86,7 @@ namespace Parcial.UI.Registro
                 esValido = false;
             }
             return esValido;
+            //ARREGLADO
         }
 
 
