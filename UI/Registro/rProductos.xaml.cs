@@ -113,7 +113,8 @@ namespace Parcial.UI.Registro
 
             if (ProductosBLL.Guardar(Producto))
             {
-               
+                Limpiar();
+                CalcularValorInventario();
                 MessageBox.Show("Producto Guardado con exito!!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
