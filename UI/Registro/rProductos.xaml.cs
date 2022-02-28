@@ -54,6 +54,27 @@ namespace Parcial.UI.Registro
                 MessageBox.Show("Debe digitar un Costo!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
+            if(Producto.Existencia  <=0 )
+            {
+                esValido = false;
+                ExistenciaTextBox.Focus();
+                MessageBox.Show("Debe digitar Existencia!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            if (Producto.Costo <= 0)
+            {
+                esValido = false;
+                CostoTextBox.Focus();
+                MessageBox.Show("Debe digitar un Costo!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+
+            else if (string.IsNullOrWhiteSpace(Producto.Existencia.ToString()))
+            {
+                esValido = false;
+                ExistenciaTextBox.Focus();
+                MessageBox.Show("Debe digitar  Existencia!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
             else if (ProductosBLL.Existe(Producto.ProductoId))
             {
                 MessageBox.Show("El Producto ya Existe!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
