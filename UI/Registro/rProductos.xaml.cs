@@ -77,12 +77,12 @@ namespace Parcial.UI.Registro
             {
                 esValido = false;
                 ExistenciaTextBox.Focus();
-                MessageBox.Show("Debe digitar  Existencia!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Debe digitar Existencia!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
             else if (ProductosBLL.Existe(Producto.ProductoId))
             {
-                MessageBox.Show("El Producto ya Existe!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("El Producto ID del producto ya Existe!!", "Validacion", MessageBoxButton.OK, MessageBoxImage.Error);
                 esValido = false;
             }
             return esValido;
@@ -114,12 +114,13 @@ namespace Parcial.UI.Registro
             Limpiar();
 
         }
-        private int CalcularValorInventario()
+        public int CalcularValorInventario()
         {
+            
 
             int InventarioValor = Convert.ToInt32(CostoTextBox.Text) * Convert.ToInt32(ExistenciaTextBox.Text);
             ValorInventarioTextBox.Text = InventarioValor.ToString();
-
+    
             return InventarioValor;
 
 
@@ -127,22 +128,28 @@ namespace Parcial.UI.Registro
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            CalcularValorInventario();
+           
 
             if (!Validar())
                 return;
 
             if (ProductosBLL.Existe(DescripcionTextBox.Text))
             {
-                MessageBox.Show("Ya existe este producto.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("La Descripcion del producto ya existe!!.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
+            }
+
+          
+            if (ExistenciaTextBox.Text != String.Empty && CostoTextBox.Text != String.Empty)
+            {
+                Producto.ValorInventario = CalcularValorInventario();
             }
 
             if (ProductosBLL.Guardar(Producto))
             {
-                Limpiar();
-                CalcularValorInventario();
+
                 MessageBox.Show("Producto Guardado con exito!!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                Limpiar();
 
             }
 
